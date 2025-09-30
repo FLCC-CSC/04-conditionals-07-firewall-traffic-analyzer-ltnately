@@ -18,7 +18,7 @@ def main():
     print("FIREWALL LOG:")
     print(f"Port: {port_number}, Transfer Size: {file_size_mb} MB")
 
-    if port_number == 22 and file_size_mb > 500:
+    if (port_number == 22 or port_number == 3389) and file_size_mb >= 100:
         print("Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!")
     
     elif port_number == 80 and file_size_mb > 100:
